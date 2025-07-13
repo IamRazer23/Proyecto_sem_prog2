@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<!-- <%@ page contentType="text/html; charset=UTF-8" language="java" %> --> <!-- Hay que volver a activar esta línea si se usa JSP -->
 <!DOCTYPE html>
 <html lang="es">
 
