@@ -1,12 +1,4 @@
 <%@ page import="java.sql.*" language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Resultado de Login</title>
-</head>
-<body>
-
 <%
 String usuario = request.getParameter("usuario");
 String contrasena = request.getParameter("contrasena");
@@ -16,10 +8,8 @@ PreparedStatement ps = null;
 ResultSet rs = null;
 
 try {
-    // Cargar driver
     Class.forName("com.mysql.cj.jdbc.Driver");
 
-    // Cambia el puerto si el tuyo no es 3306
     String url = "jdbc:mysql://localhost:3306/AlquilerdeAutos?useSSL=false&serverTimezone=UTC";
     String dbUser = "root";
     String dbPass = "";
@@ -34,7 +24,15 @@ try {
 
     if (rs.next()) {
         String nombreCompleto = rs.getString("nombre_completo");
-        out.println("<h2>¡Bienvenido, " + nombreCompleto + "!</h2>");
+
+        if ("ARuiz".equals(usuario)) {
+            // Si es admin, redirigir a AdminPanel.jsp
+            response.sendRedirect("AdminPanel.jsp");
+        } else {
+            out.println("<h2>¡Bienvenido, " + nombreCompleto + "!</h2>");
+            response.sendRedirect("Home.jsp");
+        }
+
     } else {
         out.println("<h2>Usuario o contraseña incorrectos.</h2>");
     }
@@ -48,6 +46,3 @@ try {
     try { if (conn != null) conn.close(); } catch (Exception ex) {}
 }
 %>
-
-</body>
-</html>

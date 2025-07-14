@@ -1,36 +1,36 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alquiler de Autos - Iniciar Sesión</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
 <section>
 <div class="login-box">
-   <form action="procesologin.jsp" method="post">
+   <form action="ProcesoLogin.jsp" method="post">
         <h2>Login</h2>
         <div class="input-box">
             <span class="icon">
                 <ion-icon name="mail"></ion-icon>
             </span>
-            <input type="email" name="usuario" required>
-            <label>Email</label>
+            <input type="text" name="usuario" required>
+            <label>Usuario</label>
         </div>
         <div class="input-box">
         <span class="icon">
             <ion-icon name="lock-closed"></ion-icon>
         </span>
         <input type="password" name="contrasena" required>
-        <label>Password</label>
+        <label>Contraseña</label>
         </div>
+
+        <button type="submit" name="accion" value="login">Login</button>
+
    </form>
 </div>
 </section>
