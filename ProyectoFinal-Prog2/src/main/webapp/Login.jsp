@@ -4,46 +4,38 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alquiler de Autos - Iniciar Sesión</title>
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alquiler de Autos - Iniciar Sesión</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <section>
-    <div class="login-box">
-       <form action="">
-            <h2>Login</h2>
-            <div class="input-box">
-                <span class="icon">
-                    <ion-icon name="mail"></ion-icon>
-                </span>
-                <input type="email" required>
-                <label>Email</label>
-            </div>
-            <div class="input-box">
+<section>
+<div class="login-box">
+   <form action="procesologin.jsp" method="post">
+        <h2>Login</h2>
+        <div class="input-box">
             <span class="icon">
-                <ion-icon name="lock-closed"></ion-icon>
+                <ion-icon name="mail"></ion-icon>
             </span>
-            <input type="password" required>
-            <label>Password</label>
-            </div>
-            <div class="remember-forgot">
-            <label><input type="checkbox"> Remember me</label>
-            <a href="#">Forgot Password</a>
-            </div>
-            <button type="submit">Login</button>
-            <div class="register-link">
-                <p>Don't have an account? <a href="Registro.jsp">Register here</a></p>
-            </div>
-       </form>
-    </div>
-    </section>
+            <input type="email" name="usuario" required>
+            <label>Email</label>
+        </div>
+        <div class="input-box">
+        <span class="icon">
+            <ion-icon name="lock-closed"></ion-icon>
+        </span>
+        <input type="password" name="contrasena" required>
+        <label>Password</label>
+        </div>
+   </form>
+</div>
+</section>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
