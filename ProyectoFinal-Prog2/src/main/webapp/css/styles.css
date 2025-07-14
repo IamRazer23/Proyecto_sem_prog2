@@ -259,5 +259,41 @@ button {
   font-size: 32px;
   font-weight: 400;
   text-align: center;
-  color: green;
+  border-bottom: #444 solid 2px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  margin-top: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.subtitulo-auto {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Auto {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.Auto img {
+  text-align: center;
+
+}
+.datos-auto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1px;
 }
