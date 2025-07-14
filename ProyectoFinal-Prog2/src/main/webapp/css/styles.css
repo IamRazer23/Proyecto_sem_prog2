@@ -288,10 +288,16 @@ button {
   transition: transform 0.3s;
   text-align: center;
 }
-.Auto img {
-  text-align: center;
-  background: none;
+.auto-img {
+  width: 100%;           /* ocupa todo el ancho del contenedor .Auto */
+  max-width: 280px;      /* nunca más ancha de 280px (ajusta a tu grid) */
+  height: 180px;         /* altura fija igual para todas */
+  object-fit: cover;     /* recorta/escala para llenar sin deformar */
+  border-radius: 6px;    /* opcional rounding para que case con la tarjeta */
+  display: block;        /* elimina inline-spacing */
+  margin: 0 auto 12px;   /* centrar y separar de abajo */
 }
+
 .Auto .status {
   display: inline-block;     /* sólo tan ancho como el texto+icono */
   margin: 8px 0 16px;        /* margen arriba y abajo */
@@ -304,6 +310,7 @@ button {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 1px;
+  white-space: nowrap;
 }
 
 .icon-row {
