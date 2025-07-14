@@ -16,21 +16,17 @@
     <nav class="navbar">
         <ul>
             <li><a href="Flota.jsp">Flota</a></li>
-            <li><a href="Localizaciones.jsp">Locaciones</a></li>
-            <li><a href="Reservas.jsp">Mis Reservas</a></li>
             <li><a href="Gracias.jsp">Sobre Nosotros</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-<section class="reserva-pasos">
-    <p>1️⃣ Auto → 2️⃣ Reserva → <strong>3️⃣ Checkout</strong></p>
-</section>
 
 <div class="checkout-container">
 <%
 String id = request.getParameter("id");
+String imagen = request.getParameter("imagen");
 String cobertura = request.getParameter("cobertura");
 String extras = request.getParameter("extras");
 String subtotal = request.getParameter("subtotal");
@@ -91,7 +87,7 @@ if (nombre != null && apellido != null) {
 
 <h3>Carro <%= id %> o similar</h3>
 
-<img src="tu_imagen_o_placeholder.jpg" alt="Auto" style="max-width:200px;">
+<img src="<%= imagen %>" alt="Auto" style="max-width:200px;">
 
 <div class="datos-auto">
 <p>⚙️ AT &nbsp; ⛽ Ngal/Km &nbsp; ❄ A/C</p>

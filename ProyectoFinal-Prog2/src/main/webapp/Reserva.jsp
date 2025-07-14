@@ -16,17 +16,12 @@
     <nav class="navbar">
         <ul>
             <li><a href="Flota.jsp">Flota</a></li>
-            <li><a href="Localizaciones.jsp">Locaciones</a></li>
-            <li><a href="Reservas.jsp">Mis Reservas</a></li>
-            <li><a href="Gracias.jsp">Sobre Nosotros</a></li>
+            <li><a href="">Sobre Nosotros</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-<section class="reserva-pasos">
-    <p>1️⃣ Auto → <strong>2️⃣ Reserva</strong> → 3️⃣ Checkout</p>
-</section>
 
 <div class="reserva-contenedor">
 <%
@@ -105,16 +100,18 @@ GPS - $5/día</label>
     <p><strong>Total: $<span id="total"></span></strong></p>
 
     <form action="Checkout.jsp" method="post" id="formReserva">
-        <input type="hidden" name="id" value="<%= id %>">
-        <input type="hidden" name="subtotal" id="inputSubtotal">
-        <input type="hidden" name="itbms" id="inputItbms">
-        <input type="hidden" name="total" id="inputTotal">
-        <input type="hidden" name="cobertura" id="inputCobertura">
-        <input type="hidden" name="extras" id="inputExtras">
-        <input type="hidden" name="fecha_inicio" id="inputFechaInicio">
-        <input type="hidden" name="fecha_fin" id="inputFechaFin">
-        <button type="submit">Continuar</button>
-    </form>
+  <input type="hidden" name="id" value="<%= id %>">
+  <input type="hidden" name="imagen" value="<%= imagen %>">
+  <input type="hidden" name="subtotal" id="inputSubtotal">
+  <input type="hidden" name="itbms" id="inputItbms">
+  <input type="hidden" name="total" id="inputTotal">
+  <input type="hidden" name="cobertura" id="inputCobertura">
+  <input type="hidden" name="extras" id="inputExtras">
+  <input type="hidden" name="fecha_inicio" id="inputFechaInicio">
+  <input type="hidden" name="fecha_fin" id="inputFechaFin">
+  <button type="submit">Continuar</button>
+</form>
+
 </div>
 
 <script>
