@@ -16,7 +16,7 @@
     <ul>
       <li><p>EN</p>
     <ion-icon name="globe"></ion-icon></li>
-      <li><a href="Flota.html">Flota</a></li>
+      <li><a href="Flota.jsp">Flota</a></li>
       <li><a href="#">Locaciones</a></li>
       <li><a href="#">Mis Reservas</a></li>
       <li><a href="#">Sobre Nosotros</a></li>

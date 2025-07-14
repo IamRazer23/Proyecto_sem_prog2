@@ -268,11 +268,11 @@ button {
 .main-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
   gap: 10px;
   margin-top: 30px;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 30px;
 }
 .subtitulo-auto {
   font-size: 24px;
@@ -286,14 +286,55 @@ button {
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  text-align: center;
 }
 .Auto img {
   text-align: center;
-
+  background: none;
+}
+.Auto .status {
+  display: inline-block;     /* sólo tan ancho como el texto+icono */
+  margin: 8px 0 16px;        /* margen arriba y abajo */
+  padding: 4px 12px;         /* agranda el «colchón» lateral */
+  border-radius: 4px;
+  font-weight: 500;
 }
 .datos-auto {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 1px;
+}
+
+.icon-row {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.icon-row li {
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+.status.available {
+  background: #e6f4ea;
+  color: #2c7a4b;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.status.unavailable {
+  background: #fdecea;
+  color: #a51e1e;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+ion-icon {
+  font-size: 1.5em;
+  color: #333;
+}
+a {
+	text-decoration: none;
+	color: #333;
 }
