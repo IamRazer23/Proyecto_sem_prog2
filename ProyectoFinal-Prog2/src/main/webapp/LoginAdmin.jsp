@@ -10,8 +10,10 @@
 </head>
 <body>
 
+<%-- Sección centralizada de login --%>
 <section>
 <div class="login-box">
+<%-- Formulario que envía los datos a ProcesoLogin.jsp mediante POST --%>
    <form action="ProcesoLogin.jsp" method="post">
         <h2>Login</h2>
         <div class="input-box">

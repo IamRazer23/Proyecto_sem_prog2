@@ -29,6 +29,7 @@ try {
             // Si es admin, redirigir a AdminPanel.jsp
             response.sendRedirect("AdminPanel.jsp");
         } else {
+            // Para usuarios normales, mostrar mensaje de bienvenida y redirigir a la flota
             out.println("<h2>¡Bienvenido, " + nombreCompleto + "!</h2>");
             response.sendRedirect("Home.jsp");
         }

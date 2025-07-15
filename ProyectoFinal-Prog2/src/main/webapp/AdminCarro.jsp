@@ -11,6 +11,7 @@
 
 <header class="header">
 <div class="logo">
+ <!-- Vuelve a Home al hacer clic en el logo -->
 <a href="Home.html"><img src="imagenes/Logo.png" alt="Logo" height="40"></a>
 </div>
 <nav class="navbar">
@@ -21,6 +22,7 @@
 </ul>
 </nav>
 <div class="header-right">
+<!-- Enlace al perfil o página de usuario -->
 <a href="Flota.jsp"><ion-icon name="person"></ion-icon></a>
 </div>
 </header>
@@ -29,9 +31,11 @@
 <h2 class="titulo-boton">Editar Auto</h2>
 
 <%
+// Captura del parámetro "id" para determinar el auto a editar o eliminar
 String idStr = request.getParameter("id");
 if (idStr == null || idStr.isEmpty()) {
 %>
+<!-- Mensaje de error si no se proporciona ID -->
 <p>Error: ID no especificado.</p>
 <a href="AdminPanel.jsp" class="boton-reserva">Volver</a>
 <%
@@ -39,8 +43,9 @@ if (idStr == null || idStr.isEmpty()) {
     int id = Integer.parseInt(idStr);
     String accion = request.getParameter("accion");
 
+    // POST sin acción "eliminar" → actualizar datos del auto
     if ("POST".equalsIgnoreCase(request.getMethod()) && (accion == null || !"eliminar".equals(accion))) {
-        // Actualizar
+        // Lectura de campos del formulario de edición
         String nombre = request.getParameter("nombre");
         String imagen = request.getParameter("imagen");
         double precio = Double.parseDouble(request.getParameter("precio"));
@@ -52,13 +57,14 @@ if (idStr == null || idStr.isEmpty()) {
         int puertas = Integer.parseInt(request.getParameter("puertas"));
         boolean disponible = "1".equals(request.getParameter("disponible"));
 
+        // Conexión JDBC y sentencia preparada para UPDATE
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection conn = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/AlquilerdeAutos?useSSL=false&serverTimezone=UTC", 
             "root", "");
         PreparedStatement ps = conn.prepareStatement(
             "UPDATE autos SET nombre=?, imagen=?, precio=?, transmision=?, combustible=?, aire_acondicionado=?, espacio=?, pasajeros=?, puertas=?, disponible=? WHERE id=?");
-
+// Asignación de parámetros en orden
         ps.setString(1, nombre);
         ps.setString(2, imagen);
         ps.setDouble(3, precio);
@@ -75,6 +81,7 @@ if (idStr == null || idStr.isEmpty()) {
         ps.close();
         conn.close();
 %>
+<!-- Confirmación visual de éxito en la actualización -->
 <p style="text-align:center; color:green;">✅ Auto actualizado correctamente.</p>
 <a href="AdminPanel.jsp" class="boton-reserva">Volver</a>
 <%
@@ -90,6 +97,7 @@ if (idStr == null || idStr.isEmpty()) {
         ps.close();
         conn.close();
 %>
+<!-- Confirmación visual de eliminación -->
 <p style="text-align:center; color:red;">🗑️ Auto eliminado correctamente.</p>
 <a href="AdminPanel.jsp" class="boton-reserva">Volver</a>
 <%
@@ -106,7 +114,7 @@ if (idStr == null || idStr.isEmpty()) {
 
         if (rs.next()) {
 %>
-
+<!-- Formulario de edición prellenado -->
 <form method="post" action="AdminCarro.jsp?id=<%=id%>" class="edit-form" style="max-width:600px; margin:0 auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
   <label>Nombre: <input type="text" name="nombre" value="<%= rs.getString("nombre") %>"></label><br>
 

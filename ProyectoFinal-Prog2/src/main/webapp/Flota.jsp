@@ -93,7 +93,7 @@ while (rs.next()) {
   <div class="precio">
     💲 <%= precio %> <span style="font-size:12px;">por día</span>
   </div>
-
+<%-- Formulario para iniciar reserva del auto --%>
   <form class="reserva-form" action="Reserva.jsp" method="get">
     <input type="hidden" name="id" value="<%= id %>">
     <button type="submit" class="boton-reserva" <%= disponible?"":"disabled" %>>Reservar</button>

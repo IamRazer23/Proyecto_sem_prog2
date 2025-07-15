@@ -27,9 +27,10 @@
 
 <main>
 <h2 class="titulo-boton">Agregar Nuevo Auto</h2>
-
+<!-- Se chequea si la petición es de tipo POST para procesar el formulario -->
 <%
 if ("POST".equalsIgnoreCase(request.getMethod())) {
+    // Captura de los datos enviados desde el formulario
     String nombre = request.getParameter("nombre");
     String imagen = request.getParameter("imagen");
     double precio = Double.parseDouble(request.getParameter("precio"));
@@ -48,6 +49,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
     PreparedStatement ps = conn.prepareStatement(
         "INSERT INTO autos (nombre, imagen, precio, transmision, combustible, aire_acondicionado, espacio, pasajeros, puertas, disponible) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
+// Asignación de parámetros a la sentencia preparada
     ps.setString(1, nombre);
     ps.setString(2, imagen);
     ps.setDouble(3, precio);
@@ -68,7 +70,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
 <%
 } else {
 %>
-
+<!-- Formulario para ingresar los datos de un nuevo auto -->
 <form method="post" action="AgregarCarro.jsp" class="edit-form" style="max-width:600px; margin:0 auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
   <label>Nombre: <input type="text" name="nombre" required></label><br>
 

@@ -25,6 +25,7 @@
 
 <div class="checkout-container">
 <%
+// Obtenemos los parámetros enviados en la URL o en el formulario anterior
 String id = request.getParameter("id");
 String imagen = request.getParameter("imagen");
 String cobertura = request.getParameter("cobertura");
@@ -35,6 +36,7 @@ String total = request.getParameter("total");
 String fechaInicio = request.getParameter("fecha_inicio");
 String fechaFin = request.getParameter("fecha_fin");
 
+// Verificamos si ya llegaron los datos del conductor para procesar la reserva
 String nombre = request.getParameter("nombre");
 String apellido = request.getParameter("apellido");
 
@@ -60,7 +62,7 @@ if (nombre != null && apellido != null) {
     }
 } else {
 %>
-
+<%-- Formulario para capturar datos del conductor --%>
 <form method="post" class="checkout-form">
 <input type="hidden" name="id" value="<%= id %>">
 <input type="hidden" name="cobertura" value="<%= cobertura %>">
@@ -81,6 +83,7 @@ if (nombre != null && apellido != null) {
 <button type="submit">Reservar</button>
 </form>
 
+ <%-- Resumen de la reserva y los detalles del auto --%>
 <div class="checkout-summary">
 <h3>Retiro - Retorno</h3>
 <p>📅 <%= fechaInicio %> → <%= fechaFin %></p>

@@ -32,6 +32,7 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 Connection conn = DriverManager.getConnection(
   "jdbc:mysql://localhost:3306/AlquilerdeAutos?useSSL=false&serverTimezone=UTC", 
   "root", "");
+  // Ejecutar consulta para recuperar todos los autos
 Statement st = conn.createStatement();
 ResultSet rs = st.executeQuery(
   "SELECT id, nombre, imagen, disponible, precio, transmision, combustible, aire_acondicionado, espacio, pasajeros, puertas FROM autos");
@@ -39,6 +40,7 @@ ResultSet rs = st.executeQuery(
 
 <div class="main-container">
 <%
+// Iterar sobre cada registro de auto y generar su "card" de edición
 while (rs.next()) {
     int id = rs.getInt("id");
     String nombre = rs.getString("nombre");

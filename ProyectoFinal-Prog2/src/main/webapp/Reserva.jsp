@@ -25,6 +25,7 @@
 
 <div class="reserva-contenedor">
 <%
+// Capturar parámetro 'id' de la solicitud
 String idParam = request.getParameter("id");
 int id = 0;
 double precio = 0.0;
@@ -55,6 +56,8 @@ if (idParam != null) {
             int aire_acondicionado = rs.getInt("aire_acondicionado");
 %>
 
+<!-- Sección izquierda: selección de coberturas y extras -->
+
 <div class="reserva-izquierda">
 <h3>Coberturas</h3>
 <label><input type="radio" name="cobertura-radio" class="opcion-cobertura" data-precio="15" checked>
@@ -71,6 +74,8 @@ Silla de Bebé - $0/día</label>
 GPS - $5/día</label>
 </div>
 
+
+<!-- Sección derecha: resumen de reserva y formulario de envío -->
 <div class="reserva-derecha">
     <h3>Retiro - Retorno</h3>
     <p>
@@ -99,6 +104,7 @@ GPS - $5/día</label>
     <p>ITBMS: $<span id="itbms"></span></p>
     <p><strong>Total: $<span id="total"></span></strong></p>
 
+<!-- Formulario oculto para enviar datos al checkout -->
     <form action="Checkout.jsp" method="post" id="formReserva">
   <input type="hidden" name="id" value="<%= id %>">
   <input type="hidden" name="imagen" value="<%= imagen %>">
@@ -114,12 +120,15 @@ GPS - $5/día</label>
 
 </div>
 
+<!-- Script para calcular precios y actualizar la interfaz -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  // Precio base diario desde el servidor
   const precioBase = <%= precio %>;
   const coberturas = document.querySelectorAll(".opcion-cobertura");
   const extras = document.querySelectorAll(".opcion-extra");
 
+// Recalcula subtotal, ITBMS y total, y actualiza elementos
   function recalcular() {
     let dias = calcularDias();
     if (dias < 1) dias = 1;
@@ -137,19 +146,23 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("itbms").textContent = itbms.toFixed(2);
     document.getElementById("total").textContent = total.toFixed(2);
 
+// Actualizar valores ocultos del formulario
     document.getElementById("inputSubtotal").value = subtotal.toFixed(2);
     document.getElementById("inputItbms").value = itbms.toFixed(2);
     document.getElementById("inputTotal").value = total.toFixed(2);
 
+// Resumen de cobertura seleccionada
     const coberturaSel = [...coberturas].find(c => c.checked);
     document.getElementById("inputCobertura").value = coberturaSel?.parentNode.textContent.trim();
     document.getElementById("resumenCobertura").textContent = coberturaSel?.parentNode.textContent.trim();
 
+ // Resumen de extras seleccionados
     const extrasSel = [...extras].filter(e => e.checked).map(e => e.parentNode.textContent.trim()).join(", ");
     document.getElementById("inputExtras").value = extrasSel;
     document.getElementById("resumenExtras").textContent = extrasSel;
   }
 
+// Calcula la cantidad de días entre dos fechas
   function calcularDias() {
     const inicio = document.getElementById("fechaInicio").value;
     const fin = document.getElementById("fechaFin").value;
@@ -165,6 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return diffDays > 0 ? diffDays : 1;
   }
 
+// Listeners para cambios de fecha y opciones
   document.getElementById("fechaInicio").addEventListener("change", () => {
     document.getElementById("inputFechaInicio").value = document.getElementById("fechaInicio").value;
     recalcular();
@@ -176,6 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   [...coberturas, ...extras].forEach(e => e.addEventListener("change", recalcular));
 
+ // Cálculo inicial
   recalcular();
 });
 </script>
