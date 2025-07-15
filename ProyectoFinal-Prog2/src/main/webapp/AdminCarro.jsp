@@ -33,7 +33,7 @@ String idStr = request.getParameter("id");
 if (idStr == null || idStr.isEmpty()) {
 %>
 <p>Error: ID no especificado.</p>
-<a href="adminPanel.jsp" class="boton-reserva">Volver</a>
+<a href="AdminPanel.jsp" class="boton-reserva">Volver</a>
 <%
 } else {
     int id = Integer.parseInt(idStr);
@@ -76,7 +76,7 @@ if (idStr == null || idStr.isEmpty()) {
         conn.close();
 %>
 <p style="text-align:center; color:green;">✅ Auto actualizado correctamente.</p>
-<a href="adminPanel.jsp" class="boton-reserva">Volver</a>
+<a href="AdminPanel.jsp" class="boton-reserva">Volver</a>
 <%
     } else if ("eliminar".equals(accion)) {
         // Eliminar
