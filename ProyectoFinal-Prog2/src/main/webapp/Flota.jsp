@@ -17,11 +17,11 @@
 <ul>
 <li><p>EN</p><ion-icon name="globe"></ion-icon></li>
 <li><a href="Flota.jsp">Flota</a></li>
-<li><a href="#">Sobre Nosotros</a></li>
+<li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
 </ul>
 </nav>
 <div class="header-right">
-<ion-icon name="person"></ion-icon>
+<a href="LoginAdmin.jsp"><ion-icon name="person"></ion-icon></a>
 </div>
 </header>
 

@@ -21,7 +21,7 @@
 </ul>
 </nav>
 <div class="header-right">
-<ion-icon name="person"></ion-icon>
+<a href="Flota.jsp"><ion-icon name="person"></ion-icon></a>
 </div>
 </header>
 
