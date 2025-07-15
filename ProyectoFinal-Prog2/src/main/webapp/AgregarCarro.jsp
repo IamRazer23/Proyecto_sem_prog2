@@ -64,7 +64,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
     conn.close();
 %>
 <p style="text-align:center; color:green;">✅ Auto agregado correctamente.</p>
-<a href="adminPanel.jsp" class="boton-reserva">Volver</a>
+<a href="AdminPanel.jsp" class="boton-reserva">Volver</a>
 <%
 } else {
 %>
@@ -95,7 +95,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
   </label><br><br>
 
   <button type="submit" class="boton-reserva">Guardar</button>
-  <a href="adminPanel.jsp" class="boton-reserva">Cancelar</a>
+  <a href="AdminPanel.jsp" class="boton-reserva">Cancelar</a>
 </form>
 
 <%
