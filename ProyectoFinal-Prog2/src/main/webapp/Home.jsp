@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -158,7 +159,7 @@
 <body>
   <header class="header">
     <div class="logo">
-      <img src="imagenes/logo.png" alt="Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Car_rental_logo.svg/512px-Car_rental_logo.svg.png" alt="Logo">
     </div>
     <nav class="navbar">
       <ul>
@@ -180,31 +181,30 @@
 
       <article class="noticia">
         <div class="texto">
-          <h3>🔋 Panamá impulsa movilidad sostenible</h3>
-          <p>El gobierno panameño implementa estrategias para reducir el tráfico, incluyendo incentivos al uso de autos eléctricos y compartidos.</p>
-          <a href="#">Leer artículo</a>
+          <h3>🚔 Más de mil sanciones en 24 horas por infracciones de tránsito</h3>
+          <p>Panamá / En las últimas 24 horas, la Dirección Nacional de Operaciones del Tránsito (DNOT) reportó 1,904 infracciones al reglamento, siendo el exceso de velocidad la más común entre los conductores.</p>
+          <a href="https://www.tvn-2.com/nacionales/accidente-transito-mil-sanciones-atropellos-colon_1_2197881.html" target="_blank">Leer artículo</a>
         </div>
-        <img src="imagenes/movilidad.jpg" alt="Movilidad Sostenible">
+        <img src="https://cdn.pixabay.com/photo/2019/11/24/10/29/police-4649780_1280.jpg" alt="Agente de tránsito sancionando">
       </article>
 
       <article class="noticia">
         <div class="texto">
-          <h3>📈 Alquiler de autos en auge durante la temporada alta</h3>
-          <p>Durante las vacaciones, el alquiler de autos en Panamá aumenta hasta un 26%, impulsado por el turismo nacional e internacional.</p>
-          <a href="#">Leer más</a>
+          <h3>⚠️ Policía alerta sobre aumento de estafas en compra de autos por internet</h3>
+          <p>Panamá / La Policía Nacional reporta un incremento de fraudes en compras de vehículos en línea: estafadores piden adelantos y luego desaparecen, sin entregar el vehículo ni devolver el dinero.</p>
+          <a href="https://www.telemetro.com/nacionales/policia-nacional-reporta-aumento-estafas-la-compra-autos-internet-n6033639" target="_blank">Leer artículo</a>
         </div>
-        <img src="imagenes/alquiler.jpg" alt="Alquiler de Autos">
+        <img src="https://cdn.pixabay.com/photo/2020/06/24/11/27/police-5331528_1280.jpg" alt="Estafas por internet en autos">
       </article>
 
       <article class="noticia">
         <div class="texto">
-          <h3>🎥 Los mejores destinos para recorrer en auto por Panamá</h3>
-          <p>Video con recomendaciones de rutas, tips y paisajes ideales para explorar el país en auto.</p>
-          <a href="#">Ver en YouTube</a>
+          <h3>🚗 ALQUILER DE AUTOS EN PANAMÁ – ¡Muy Barato en el Aeropuerto!</h3>
+          <p>Descubre cómo alquilar un auto barato en el aeropuerto de Panamá, con consejos para economizar, tipos de seguros, empresas recomendadas y todo lo que necesitas saber antes de reservar.</p>
+          <a href="https://www.youtube.com/watch?v=fQkpeNuRyjo" target="_blank">Ver video</a>
         </div>
-        <iframe src="https://www.youtube.com/embed/x2TfMJ9uVAo" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/fQkpeNuRyjo" frameborder="0" allowfullscreen></iframe>
       </article>
-
     </section>
   </main>
 
@@ -237,5 +237,4 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
-
 
