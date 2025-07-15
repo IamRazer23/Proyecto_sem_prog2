@@ -11,7 +11,7 @@
 
 <header class="header">
 <div class="logo">
-<a href="Home.jsp"><img src="logo.png" alt="Logo" height="40"></a>
+<a href="Home.jsp"><img src="imagenes/logo.png" alt="Logo" height="40"></a>
 </div>
 <nav class="navbar">
 <ul>

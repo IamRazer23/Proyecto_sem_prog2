@@ -10,7 +10,7 @@
 
 <header class="header">
   <div class="logo">
-    <img src="logo.png" alt="Logo" height="40">
+    <img src="imagenes/logo.png" alt="Logo" height="40">
   </div>
  <nav class="navbar">
     <ul>
