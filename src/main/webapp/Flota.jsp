@@ -15,9 +15,13 @@
 </div>
 <nav class="navbar">
 <ul>
-<li><p>EN</p><ion-icon name="globe"></ion-icon></li>
-<li><a href="Flota.jsp">Flota</a></li>
-<li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+	<li><p>EN</p><ion-icon name="globe"></ion-icon></li>
+	<li><a href="Flota.jsp">Flota</a></li>
+	<li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+    <li><a href="https://www.google.com/"><ion-icon name="search-outline"></ion-icon></a></li>
+    <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    <li><a href="https://x.com/?lang=es"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="https://www.tiktok.com/es-419/"><ion-icon name="logo-tiktok"></ion-icon></a></li>
 </ul>
 </nav>
 <div class="header-right">

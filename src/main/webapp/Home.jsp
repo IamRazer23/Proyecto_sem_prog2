@@ -11,12 +11,15 @@
 <header class="header">
   <div class="logo">
     <a href="Home.jsp"><img src="imagenes/Logo.png" alt="Logo" height="40"></a>
-    <a href="google.com"><ion-icon name="search-outline"></ion-icon></a>
   </div>
   <nav class="navbar">
     <ul>
       <li><a href="Flota.jsp">Flota</a></li>
       <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+      <li><a href="https://www.google.com/"><ion-icon name="search-outline"></ion-icon></a></li>
+      <li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li><a href="https://x.com/?lang=es"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="https://www.tiktok.com/es-419/"><ion-icon name="logo-tiktok"></ion-icon></a></li>
     </ul>
   </nav>
   <div class="header-right">

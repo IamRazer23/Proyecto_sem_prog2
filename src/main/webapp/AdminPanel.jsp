@@ -21,7 +21,7 @@
 </ul>
 </nav>
  <div class="header-right">
-      <a href="LoginAdmin.jsp"><ion-icon name="person"></ion-icon></a>
+      <a href="LoginAdmin.jsp"><ion-icon name="exit"></ion-icon></a>
 </div>
 </header>
 
